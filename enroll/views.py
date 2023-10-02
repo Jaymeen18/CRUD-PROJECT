@@ -23,7 +23,7 @@ def add_show(request):
     # data_queryset=User.objects.filter(name__startswith='f')
     return render(request,'enroll/addandshow.html',{'form':student_object,'student_data':data_queryset})
 
-#This Function will Update
+#This Function will Update the record
 def update_data(request,id):
     if request.method=='POST':
         update_user=User.objects.get(id=id)
@@ -37,7 +37,7 @@ def update_data(request,id):
     return render(request,'enroll/updatestudent.html',{'form':student_object})
 
 
-#This Function will Delete
+#This Function will Delete the record
 def delete_data(request,id):
     if request.method == 'POST':
         delete_user=User.objects.get(id=id)
