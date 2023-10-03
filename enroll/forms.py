@@ -5,6 +5,7 @@ from .models import User
 
 class Student_Registrations(forms.ModelForm):
     class Meta:
+        
         model=User
         # fields=['name','email','password']
         fields='__all__'
